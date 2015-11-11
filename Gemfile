@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in teamweek-pipes-trello.gemspec
+gem 'teamweek-pipes', git: 'https://github.com/Teamweek/teamweek-pipes.git'
+
 gemspec
