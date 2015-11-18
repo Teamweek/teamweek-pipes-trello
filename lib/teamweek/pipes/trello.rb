@@ -17,9 +17,9 @@ module Teamweek
         source.name 'Trello'
         source.description '...'
 
-        source.pipe :boards, :boards, -> options { Boards.new(options).pull }
-        source.pipe :lists, :lists, -> options { Lists.new(options).pull }
-        source.pipe :tasks, :cards, -> options { Cards.new(options).pull }
+        source.pipe :none, :boards, -> options { Boards.new(options).pull }
+        source.pipe :none, :lists, -> options { Lists.new(options).pull }
+        source.pipe :none, :cards, -> options { Cards.new(options).pull }
       end
     end
   end
