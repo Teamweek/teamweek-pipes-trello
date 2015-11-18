@@ -25,7 +25,10 @@ module Teamweek
         private
 
         def authorized_get(uri)
-          raw_client.get(full_path("#{uri}?key=#{Trello.key}&token=#{raw_client.token}"))
+          raw_client.get(
+            full_path("#{uri}?key=#{Trello.key}&token=#{raw_client.token}"),
+            perform_caching: false
+          )
         end
 
         def full_path(uri)
